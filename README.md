@@ -23,3 +23,13 @@ Use this template for [composer.json](http://getcomposer.org/) to install all to
   "prefer-stable" : true
 }
 ```
+
+### TODO ###
+
+* Add *phpdox* to main packagist repository
+  * https://github.com/theseer/phpdox/pull/93
+* Add *phpcb* to main packagist repository 
+  * https://github.com/Mayflower/PHP_CodeBrowser/pull/22
+* Fix composer.json for [pear/pear_exception](https://github.com/pear/PEAR_Exception) package
+  * https://github.com/pear/PEAR_Exception/pull/4
+* Stable dependencies for all packages
