@@ -24,5 +24,5 @@ Use this template for [composer.json](http://getcomposer.org/) to install all to
 }
 ```
 
-This package is not stable
-* See [wiki](wiki)
+This package is not stable yet
+* See [wiki](https://github.com/covex-nn/phpqatools/wiki)
