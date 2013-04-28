@@ -1,6 +1,6 @@
 {
   "name" : "covex-nn/phpqatools", 
-  "type" : "metapackage", 
+  "type" : "library", 
   "description" : "Composer package for PHP QA Tools", 
   "license" : "MIT", 
   "require" : {
