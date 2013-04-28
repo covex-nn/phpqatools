@@ -40,7 +40,9 @@ Jenkins jobs for PHP Projects
 </project>
 ```
 
+* Write code, create unit-tests
 * Run <code>ant CI-build</code>
+* Profit
 
 ---
 
