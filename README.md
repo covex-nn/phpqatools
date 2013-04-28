@@ -1,7 +1,7 @@
 Jenkins jobs for PHP Projects
 =============================
 
-* Use this template for [composer.json](http://getcomposer.org/) to install all tools, described on [jenkins-php.org](http://jenkins-php.org/)
+* Use this template for composer.json to install all tools, described on [jenkins-php.org](http://jenkins-php.org/) via [Composer](http://getcomposer.org/)
 
 ```json
 {
