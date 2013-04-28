@@ -17,7 +17,8 @@ Jenkins jobs for PHP Projects
     }
   }, 
   "config" : {
-    "bin-dir" : "bin"
+    "bin-dir" : "bin", 
+    "preferred-install" : "dist"
   }, 
   "minimum-stability" : "dev", 
   "prefer-stable" : true
