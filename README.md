@@ -30,6 +30,8 @@ Use this template for [composer.json](http://getcomposer.org/) to install all to
   * https://github.com/theseer/phpdox/pull/93
 * Add *phpcb* to main packagist repository 
   * https://github.com/Mayflower/PHP_CodeBrowser/pull/22
-* Fix composer.json for [pear/pear_exception](https://github.com/pear/PEAR_Exception) package
-  * https://github.com/pear/PEAR_Exception/pull/4
+* Ownership of [pear/pear_exception](https://github.com/pear/PEAR_Exception) package must move it's real [owner](https://github.com/pear/)
+  * https://packagist.org/packages/pear/pear_exception
+  * or *phpcb* must rewritten to use *zetacomponents/console-tools*
+    * pear/log ???
 * Stable dependencies for all packages
