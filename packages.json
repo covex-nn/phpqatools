@@ -1,25 +1,5 @@
 {
   "packages" : {
-    "pear/pear_exception" : {
-      "dev-master" : {
-        "name" : "pear/pear_exception", 
-        "type" : "library", 
-        "version" : "dev-master", 
-        "dist" : {
-          "url" : "https://github.com/pear/PEAR_Exception/archive/master.zip", 
-          "type" : "zip"
-        }, 
-        "source" : {
-          "url" : "git://github.com/pear/PEAR_Exception.git", 
-          "type" : "git", 
-          "reference" : "master"
-        }, 
-        "autoload": {
-           "psr-0": { "PEAR": "" }
-        }, 
-        "include-path": [""]
-      }
-    }, 
     "covex-nn/phpcb" : {
       "1.0.3" : {
         "name" : "covex-nn/phpcb", 
