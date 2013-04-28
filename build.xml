@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="covex-nn\phpqatools" default="CI-build" basedir=".">
+  
+  <property name="CI.basedir" value="${basedir}" />
+  <property name="CI.bin" value="bin" />
+  <property name="CI.source" value="src" />
+  <property name="CI.target" value="build" />
+<!--
+  <property name="CI.no-pdepend" value="1" />
+  <property name="CI.no-phpmd" value="1" />
+  <property name="CI.no-phpcpd" value="1" />
+  <property name="CI.no-phpcs" value="1" />
+  <property name="CI.no-phploc" value="1" />
+  <property name="CI.no-phpcb" value="1" />
+  <property name="CI.no-phpdox" value="1" />
+  <property name="CI.no-phpunit" value="1" />
+-->
+
+  <macrodef name="ci-tool">
+    <attribute name="name" />
+    <attribute name="dir" default="${CI.basedir}" />
+    <attribute name="failonerror" default="false" />
+    <element name="args" optional="true" />
+    
+    <sequential>
+      <exec executable="cmd" dir="@{dir}" failonerror="@{failonerror}" osfamily="windows">
+        <arg value="/c" />
+        <arg value="${CI.bin}\\@{name}.bat" />
+        <args/>
+      </exec>
+      
+      <exec executable="${CI.bin}/@{name}" dir="@{dir}" failonerror="@{failonerror}" osfamily="unix">
+        <args/>
+      </exec>
+    </sequential>
+  </macrodef>
+  
+  <target name="CI-build" depends="CI-pdepend,CI-phpmd,CI-phpcpd,CI-phpcs,CI-phploc,CI-phpcb,CI-phpdox,CI-phpunit" description="Run all PHP QA tools">
+    <echo message="${ant.project.name} Build - OK" />
+  </target>
+  
+  <!-- Generate jdepend.xml and software metrics charts using PHP_Depend -->
+  <target name="CI-pdepend" depends="CI-clean" unless="CI.no-pdepend">
+    <ci-tool name="pdepend">
+      <args>
+        <arg value="--jdepend-xml=${CI.target}/logs/jdepend.xml" />
+        <arg value="--jdepend-chart=${CI.target}/pdepend/dependencies.svg" />
+        <arg value="--overview-pyramid=${CI.target}/pdepend/overview-pyramid.svg" />
+        <arg value="${CI.source}"/>
+      </args>
+    </ci-tool>
+  </target>
+  
+  <!-- Generate pmd.xml using PHPMD -->
+  <target name="CI-phpmd" depends="CI-clean" unless="CI.no-phpmd">
+    <ci-tool name="phpmd">
+      <args>
+        <arg value="${CI.source}" />
+        <arg value="xml" />
+        <arg value="phpmd.xml" />
+        <arg value="--reportfile" />
+        <arg value="${CI.target}/logs/pmd.xml" />
+      </args>
+    </ci-tool>
+  </target>
+  
+  <!-- Generate pmd-cpd.xml using PHPCPD -->
+  <target name="CI-phpcpd" depends="CI-clean" unless="CI.no-phpcpd">
+    <ci-tool name="phpcpd">
+      <args>
+        <arg value="--log-pmd" />
+        <arg value="${CI.target}/logs/pmd-cpd.xml" />
+        <arg value="${CI.source}"/>
+      </args>
+    </ci-tool>
+  </target>
+  
+  <!-- Generate checkstyle.xml using PHP_CodeSniffer -->
+  <target name="CI-phpcs" depends="CI-clean" unless="CI.no-phpcs">
+    <ci-tool name="phpcs">
+      <args>
+        <arg value="--encoding=utf-8" />
+        <arg value="--report=checkstyle" />
+        <arg value="--report-file=${CI.target}/logs/checkstyle.xml" />
+        <arg value="--standard=phpcs.xml" />
+        <arg value="${CI.source}"/>
+      </args>
+    </ci-tool>
+  </target>
+  
+  <!-- Generate phploc.csv -->
+  <target name="CI-phploc" depends="CI-clean" unless="CI.no-phploc">
+    <ci-tool name="phploc">
+      <args>
+        <arg value="--log-csv" />
+        <arg value="${CI.target}/logs/phploc.csv" />
+        <arg value="${CI.source}" />
+      </args>
+    </ci-tool>
+  </target>
+  
+  <!-- Aggregate tool output with PHP_CodeBrowser -->
+  <target name="CI-phpcb" depends="CI-clean,CI-phpcs,CI-phpmd" unless="CI.no-phpcb">
+    <ci-tool name="phpcb">
+      <args>
+        <arg value="--log" />
+        <arg value="${CI.target}/logs" />
+        <arg value="--source" />
+        <arg value="${CI.source}" />
+        <arg value="--output" />
+        <arg value="${CI.target}/code-browser" />
+      </args>
+    </ci-tool>
+  </target>
+  
+  <!-- Generate API documentation using phpDox -->
+  <target name="CI-phpdox" depends="CI-clean" unless="CI.no-phpdox">
+    <ci-tool name="phpdox" />
+  </target>
+  
+  <!-- Run unit tests using PHPUnit and generates junit.xml and clover.xml -->
+  <target name="CI-phpunit" depends="CI-clean" unless="CI.no-phpunit">
+    <ci-tool name="phpunit" failonerror="true" />
+  </target>
+  
+  <!-- Prepeare -->
+  <target name="CI-clean">
+    <delete includeemptydirs="true" verbose="false" failonerror="false">
+      <fileset dir="${CI.target}/api" />
+      <fileset dir="${CI.target}/code-browser"/>
+      <fileset dir="${CI.target}/coverage"/>
+      <fileset dir="${CI.target}/logs"/>
+      <fileset dir="${CI.target}/pdepend"/>
+      <fileset dir="${CI.target}/phpdox"/>
+    </delete>
+
+    <mkdir dir="${CI.target}/api" />
+    <mkdir dir="${CI.target}/code-browser" />
+    <mkdir dir="${CI.target}/coverage" />
+    <mkdir dir="${CI.target}/logs" />
+    <mkdir dir="${CI.target}/pdepend" />
+  </target>
+  
+</project>

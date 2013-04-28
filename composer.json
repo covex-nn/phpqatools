@@ -22,6 +22,9 @@
       "dev-master": "1.0.x-dev"
     }
   }, 
+  "autoload" : {
+    "psr-0" : { "JooS\\Jenkins\\" : "src/" }
+  }, 
   "config" : {
     "bin-dir" : "bin"
   }, 
