@@ -40,7 +40,7 @@ Jenkins jobs for PHP Projects
 </project>
 ```
 
-* Write code, create unit-tests
+* Write [code](https://github.com/covex-nn/phpqatools/blob/master/src/JooS/Jenkins/SampleClass.php), create [unit-tests](https://github.com/covex-nn/phpqatools/blob/master/tests/src/JooS/Jenkins/SampleClassTest.php)
 * Run <code>ant CI-build</code>
 * Profit
 
