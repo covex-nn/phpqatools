@@ -5,6 +5,8 @@
   <property name="CI.bin" value="bin" />
   <property name="CI.source" value="src" />
   <property name="CI.target" value="build" />
+  
+  <property name="CI.phpcs.ext" value="php" />
 <!--
   <property name="CI.no-pdepend" value="1" />
   <property name="CI.no-phpmd" value="1" />
@@ -83,6 +85,7 @@
         <arg value="--report=checkstyle" />
         <arg value="--report-file=${CI.target}/logs/checkstyle.xml" />
         <arg value="--standard=phpcs.xml" />
+        <arg value="--extensions=${CI.phpcs.ext}" />
         <arg value="${CI.source}"/>
       </args>
     </ci-tool>
