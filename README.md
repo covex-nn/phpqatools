@@ -32,16 +32,24 @@ Jenkins jobs for PHP Projects
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <project name="Your project name" default="init">
-  <import file="vendor/covex-nn/phpqatools/build.xml" />
-  
   <target name="init">
     <echo message="${ant.project.name} Init - OK" />
   </target>
 </project>
 ```
 
+* Use this template for *build-dev.xml*
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<project name="Your project name - PHP QA Tools" default="init">
+  <import file="build.xml" />
+  <import file="vendor/covex-nn/phpqatools/build.xml" />
+</project>
+```
+
 * Write [code](https://github.com/covex-nn/phpqatools/blob/master/src/JooS/Jenkins/SampleClass.php), create [unit-tests](https://github.com/covex-nn/phpqatools/blob/master/tests/src/JooS/Jenkins/SampleClassTest.php)
-* Run <code>ant CI-build</code>
+* Run <code>ant -f build-dev.xml init CI-build</code>
 * Profit
 
 ---
