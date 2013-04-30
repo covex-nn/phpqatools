@@ -4,7 +4,7 @@ php:
    - 5.3
 
 before_script:
-   - ant init
+   - composer install --dev
 
 script:
    - ant CI-build
