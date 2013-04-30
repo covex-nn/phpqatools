@@ -1,31 +1,5 @@
 {
   "packages" : {
-    "covex-nn/phpcb" : {
-      "1.0.3" : {
-        "name" : "covex-nn/phpcb", 
-        "type" : "library", 
-        "version" : "1.0.3", 
-        "require" : {
-          "pear/console_commandline": "dev-trunk",
-          "phpunit/php-file-iterator" : "1.3.*",
-          "pear/log" : "dev-master"
-        }, 
-        "dist" : {
-          "url" : "https://github.com/covex-nn/PHP_CodeBrowser/archive/composer.zip", 
-          "type" : "zip"
-        }, 
-        "source" : {
-          "url" : "git://github.com/covex-nn/PHP_CodeBrowser.git", 
-          "type" : "git", 
-          "reference" : "composer"
-        }, 
-        "autoload" : {
-          "classmap" : [ "src/" ]
-        },
-        "include-path": [ "src/" ],
-        "bin" : [ "bin/phpcb" ]
-      }
-    }, 
     "covex-nn/phpdox" : {
       "0.5.x-dev" : {
         "name" : "covex-nn/phpdox", 

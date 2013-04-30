@@ -4,15 +4,15 @@
   "description" : "Composer package for PHP QA Tools", 
   "license" : "MIT", 
   "require" : {
-    "pdepend/pdepend" : ">=1.1.0,<2.0", 
-    "phpmd/phpmd" : ">=1.4.0,<2.0", 
-    "sebastian/phpcpd" : ">=1.4.0,<2.0", 
-    "squizlabs/php_codesniffer" : ">=1.4.0", 
+    "pdepend/pdepend" : "~1.1", 
+    "phpmd/phpmd" : "~1.4", 
+    "sebastian/phpcpd" : "~1.4", 
+    "squizlabs/php_codesniffer" : "~1.4", 
     "phploc/phploc" : "dev-master", 
-    "covex-nn/phpcb" : "1.0.3", 
+    "covex-nn/phpcb" : "~1.0", 
     "covex-nn/phpdox" : "0.5.x-dev", 
-    "phpunit/phpunit" : ">=3.7.0,<4.0", 
-    "phpunit/dbunit" : ">=1.2.0,<2.0"
+    "phpunit/phpunit" : "~3.7", 
+    "phpunit/dbunit" : "~1.2"
   },
   "repositories" : [
     { "type" : "composer", "url" : "https://raw.github.com/covex-nn/phpqatools/master" }
