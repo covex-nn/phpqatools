@@ -1,6 +1,11 @@
 Jenkins jobs for PHP Projects
 =============================
 
+<a href="https://travis-ci.org/covex-nn/phpqatools/" target="_blank"><img src="https://travis-ci.org/covex-nn/phpqatools.png?branch=master" /></a>
+
+Getting started
+===============
+
 * Use this template for composer.json to install all tools, described on [jenkins-php.org](http://jenkins-php.org/) via [Composer](http://getcomposer.org/)
 
 ```json
