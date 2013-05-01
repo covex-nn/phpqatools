@@ -13,9 +13,9 @@
   <property name="CI.no-phpcpd" value="1" />
   <property name="CI.no-phpcs" value="1" />
   <property name="CI.no-phploc" value="1" />
-  <property name="CI.no-phpcb" value="1" />
   <property name="CI.no-phpdox" value="1" />
   <property name="CI.no-phpunit" value="1" />
+  <property name="CI.no-phpcb" value="1" />
 -->
 
   <macrodef name="ci-tool">
@@ -37,7 +37,7 @@
     </sequential>
   </macrodef>
   
-  <target name="CI-build" depends="CI-pdepend,CI-phpmd,CI-phpcpd,CI-phpcs,CI-phploc,CI-phpcb,CI-phpdox,CI-phpunit" description="Run all PHP QA tools">
+  <target name="CI-build" depends="CI-pdepend,CI-phpmd,CI-phpcpd,CI-phpcs,CI-phploc,CI-phpdox,CI-phpunit,CI-phpcb" description="Run all PHP QA tools">
     <echo message="${ant.project.name} Build - OK" />
   </target>
   
@@ -102,8 +102,18 @@
     </ci-tool>
   </target>
   
+  <!-- Generate API documentation using phpDox -->
+  <target name="CI-phpdox" depends="CI-clean" unless="CI.no-phpdox">
+    <ci-tool name="phpdox" />
+  </target>
+  
+  <!-- Run unit tests using PHPUnit and generates junit.xml and clover.xml -->
+  <target name="CI-phpunit" depends="CI-clean" unless="CI.no-phpunit">
+    <ci-tool name="phpunit" failonerror="true" />
+  </target>
+  
   <!-- Aggregate tool output with PHP_CodeBrowser -->
-  <target name="CI-phpcb" depends="CI-clean,CI-phpcs,CI-phpmd" unless="CI.no-phpcb">
+  <target name="CI-phpcb" depends="CI-clean,CI-phpcs,CI-phpcpd,CI-phpmd,CI-phpunit" unless="CI.no-phpcb">
     <ci-tool name="phpcb">
       <args>
         <arg value="--log" />
@@ -114,16 +124,6 @@
         <arg value="${CI.target}/code-browser" />
       </args>
     </ci-tool>
-  </target>
-  
-  <!-- Generate API documentation using phpDox -->
-  <target name="CI-phpdox" depends="CI-clean" unless="CI.no-phpdox">
-    <ci-tool name="phpdox" />
-  </target>
-  
-  <!-- Run unit tests using PHPUnit and generates junit.xml and clover.xml -->
-  <target name="CI-phpunit" depends="CI-clean" unless="CI.no-phpunit">
-    <ci-tool name="phpunit" failonerror="true" />
   </target>
   
   <!-- Prepeare -->
