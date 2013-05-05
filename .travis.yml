@@ -8,8 +8,9 @@ env:
       - secure: "Z0rvDF/7cIrkHPNZ7GkOMgKiW7adoQTwA04a5lbl2zZs55HlaiETaaNexOZh\njCTvmdgKgxxFX74NAcB0rKKnhhU9v07uDrMjtpcUGhru5+iiJxhTu4v16FyW\n+Oze/izPsgKi8DjxGX6xtNeCUlO37jCGFYgZPwT4UeYPEfYnpLg="
 
 before_script:
-   - composer config github-oauth.github.com $GITHUB_OAUTH_TOKEN
-   - composer install --dev --no-interaction
+   - wget http://getcomposer.org/composer.phar
+   - php composer.phar config github-oauth.github.com $GITHUB_OAUTH_TOKEN
+   - php composer.phar update --no-interaction
 
 script:
    - ant CI-build
