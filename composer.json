@@ -25,7 +25,7 @@
   "autoload" : {
     "psr-0" : { "JooS\\Jenkins\\" : "src/" }
   }, 
-  "config" : {
+  "config": {
     "bin-dir" : "bin", 
     "github-oauth" : {
     }
