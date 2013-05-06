@@ -9,7 +9,7 @@ env:
 
 before_script:
    - wget http://getcomposer.org/composer.phar
-   - php composer.phar config github-oauth.github.com $GITHUB_OAUTH_TOKEN
+   - sh -c "if $TRAVIS_SECURE_ENV_VARS; then php composer.phar config github-oauth.github.com $GITHUB_OAUTH_TOKEN; fi"
    - php composer.phar update --no-interaction
 
 script:
