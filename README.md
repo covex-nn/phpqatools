@@ -13,9 +13,6 @@ Getting started
   "require-dev" : {
     "covex-nn/phpqatools" : ">=1.0.0"
   }, 
-  "repositories" : [
-    { "type" : "composer", "url" : "https://raw.github.com/covex-nn/phpqatools/master" }
-  ], 
   "extra" : {
     "branch-alias": {
       "dev-master": "1.0.x-dev"
