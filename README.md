@@ -19,8 +19,7 @@ Getting started
     }
   }, 
   "config" : {
-    "bin-dir" : "bin", 
-    "preferred-install" : "dist"
+    "bin-dir" : "bin"
   }, 
   "minimum-stability" : "dev", 
   "prefer-stable" : true
