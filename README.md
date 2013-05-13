@@ -11,12 +11,7 @@ Getting started
 ```json
 {
   "require-dev" : {
-    "covex-nn/phpqatools" : ">=1.0.0"
-  }, 
-  "extra" : {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
+    "covex-nn/phpqatools" : "dev-master"
   }, 
   "config" : {
     "bin-dir" : "bin"
@@ -50,7 +45,8 @@ Getting started
 ```
 
 * Write [code](https://github.com/covex-nn/phpqatools/blob/master/src/JooS/Jenkins/SampleClass.php), create [unit-tests](https://github.com/covex-nn/phpqatools/blob/master/tests/src/JooS/Jenkins/SampleClassTest.php)
-* Run <code>ant -f build-dev.xml init CI-build</code>
+* Run <code>ant init</code>
+* Run <code>ant -f build-dev.xml CI-build</code>
 * Profit
 
 ---
