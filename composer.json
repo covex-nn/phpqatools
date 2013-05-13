@@ -9,8 +9,8 @@
     "sebastian/phpcpd" : "~1.4", 
     "squizlabs/php_codesniffer" : "~1.4", 
     "phploc/phploc" : "dev-master", 
-    "mayflower/php-codebrowser": "~1.0", 
-    "theseer/phpdox" : ">=0.5", 
+    "mayflower/php-codebrowser": "dev-master", 
+    "theseer/phpdox" : "dev-master", 
     "phpunit/phpunit" : "~3.7", 
     "phpunit/dbunit" : "~1.2"
   },
