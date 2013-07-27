@@ -8,11 +8,12 @@
     "phpmd/phpmd" : "~1.4", 
     "sebastian/phpcpd" : "~1.4", 
     "squizlabs/php_codesniffer" : "~1.4", 
-    "phploc/phploc" : "dev-master", 
-    "mayflower/php-codebrowser": "dev-master", 
-    "theseer/phpdox" : "dev-master", 
+    "covex-nn/phpcb": "~1.0", 
     "phpunit/phpunit" : "~3.7", 
-    "phpunit/dbunit" : "~1.2"
+
+    "theseer/fxsl": "dev-master as 1.0", 
+    "theseer/phpdox": "dev-master as 0.6", 
+    "phploc/phploc" : "dev-master as 1.7.5"
   },
   "extra" : {
     "branch-alias": {
@@ -26,7 +27,5 @@
     "bin-dir" : "bin", 
     "github-oauth" : {
     }
-  }, 
-  "minimum-stability" : "dev", 
-  "prefer-stable" : true
+  }
 }
