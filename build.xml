@@ -13,10 +13,10 @@
   <property name="CI.no-phpcpd" value="1" />
   <property name="CI.no-phpcs" value="1" />
   <property name="CI.no-phploc" value="1" />
-  <property name="CI.no-phpdox" value="1" />
   <property name="CI.no-phpunit" value="1" />
   <property name="CI.no-phpcb" value="1" />
 -->
+  <property name="CI.no-phpdox" value="1" />
 
   <macrodef name="ci-tool">
     <attribute name="name" />
