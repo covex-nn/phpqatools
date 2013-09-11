@@ -22,7 +22,7 @@ Getting started
 ```
 
 * Run <code>composer update</code>
-* Create your *[phpcs.xml](https://github.com/covex-nn/phpqatools/blob/master/phpcs.xml)*, *[phpdox.xml](https://github.com/covex-nn/phpqatools/blob/master/phpdox.xml)*, *[phpmd.xml](https://github.com/covex-nn/phpqatools/blob/master/phpmd.xml)* and *[phpunit.xml](https://github.com/covex-nn/phpqatools/blob/master/phpunit.xml)*.
+* Create your *[phpcs.xml](https://github.com/covex-nn/phpqatools/blob/master/phpcs.xml)*, *[phpdoc.xml](https://github.com/covex-nn/phpqatools/blob/master/phpdoc.xml)*, *[phpmd.xml](https://github.com/covex-nn/phpqatools/blob/master/phpmd.xml)* and *[phpunit.xml](https://github.com/covex-nn/phpqatools/blob/master/phpunit.xml)*.
 * Use this template for *build.xml*
 
 ```xml

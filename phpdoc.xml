@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor>
+    <parser>
+        <default-package-name>Default</default-package-name>
+        <encoding>utf-8</encoding>
+        <target>build/phpdoc</target>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+        <visibility></visibility>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>build/api</target>
+    </transformer>
+    <logging>
+        <level>warn</level>
+        <paths>
+            <default>build/logs/{DATE}.log</default>
+            <errors>build/logs/{DATE}.errors.log</errors>
+        </paths>
+    </logging>
+    <transformations>
+        <template name="abstract"/>
+    </transformations>
+</phpdocumentor>

@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <ruleset name="Apnet">
- <description>The Apnet coding standard.</description>
+    <description>The Apnet coding standard.</description>
 
- <!-- Include the whole PEAR standard except ... -->
- <rule ref="PEAR">
-  <exclude name="PEAR.Commenting.FileComment" />
-  <exclude name="PEAR.Commenting.ClassComment" />
-  <exclude name="PEAR.WhiteSpace.ScopeIndent" />
-  <exclude name="PEAR.NamingConventions.ValidFunctionName" />
-  <exclude name="PEAR.NamingConventions.ValidVariableName" />
-  <exclude name="PEAR.Files.IncludingFile" />
- </rule>
+    <!-- Include the whole PEAR standard except ... -->
+    <rule ref="PEAR">
+        <exclude name="PEAR.Commenting.FileComment" />
+        <exclude name="PEAR.Commenting.ClassComment" />
+        <exclude name="PEAR.WhiteSpace.ScopeIndent" />
+        <exclude name="PEAR.NamingConventions.ValidFunctionName" />
+        <exclude name="PEAR.NamingConventions.ValidVariableName" />
+        <exclude name="PEAR.Files.IncludingFile" />
+    </rule>
 
- <rule ref="Zend.NamingConventions.ValidVariableName" />
- 
- <rule ref="PEAR.WhiteSpace.ScopeClosingBrace">
-  <properties>
-   <property name="indent" value="2"/>
-  </properties>
- </rule>
- 
- <rule ref="PEAR.Functions.FunctionCallSignature">
-  <properties>
-   <property name="indent" value="2"/>
-  </properties>
- </rule>
+    <rule ref="Zend.NamingConventions.ValidVariableName" />
+
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace">
+        <properties>
+            <property name="indent" value="2"/>
+        </properties>
+    </rule>
+
+    <rule ref="PEAR.Functions.FunctionCallSignature">
+        <properties>
+            <property name="indent" value="2"/>
+        </properties>
+    </rule>
 </ruleset>
