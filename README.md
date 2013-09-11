@@ -11,13 +11,11 @@ Getting started
 ```json
 {
   "require-dev" : {
-    "covex-nn/phpqatools" : "dev-master"
+    "covex-nn/phpqatools" : "~1.0"
   }, 
   "config" : {
     "bin-dir" : "bin"
-  }, 
-  "minimum-stability" : "dev", 
-  "prefer-stable" : true
+  }
 }
 ```
 
