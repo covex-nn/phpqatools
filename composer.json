@@ -1,29 +1,32 @@
 {
-  "name" : "covex-nn/phpqatools", 
-  "type" : "library", 
-  "description" : "Composer package for PHP QA Tools", 
-  "license" : "MIT", 
-  "require" : {
-    "pdepend/pdepend" : "~1.1", 
-    "phpmd/phpmd" : "~1.4", 
-    "sebastian/phpcpd" : "~1.4", 
-    "squizlabs/php_codesniffer" : "~1.4", 
-    "covex-nn/phpcb": "~1.0", 
-    "phpunit/phpunit" : "~3.7", 
-    "phploc/phploc" : "~2.0", 
-    "phpdocumentor/phpdocumentor": "~2.0"
-  },
-  "extra" : {
-    "branch-alias": {
-      "dev-master": "1.0.x-dev"
-    }
-  }, 
-  "autoload" : {
-    "psr-0" : { "JooS\\Jenkins\\" : "src/" }
-  }, 
-  "config": {
-    "bin-dir" : "bin", 
-    "github-oauth" : {
-    }
-  }
+    "name" : "covex-nn/phpqatools",
+    "type" : "library",
+    "description" : "Composer package for PHP QA Tools",
+    "license" : "MIT",
+    "require" : {
+        "pdepend/pdepend" : "1.1.1",
+        "phpmd/phpmd" : "1.5.0",
+        "sebastian/phpcpd" : "1.4.3",
+        "squizlabs/php_codesniffer" : "1.4.7",
+        "covex-nn/phpcb": "1.0.3.2",
+        "phpunit/phpunit" : "3.7.27",
+        "phploc/phploc" : "2.0.2",
+        "phpdocumentor/phpdocumentor": "2.0.1"
+    },
+    "extra" : {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "autoload" : {
+        "psr-0" : { "JooS\\Jenkins\\": "src/", "Apnet_": "src/" }
+    },
+    "config": {
+        "bin-dir" : "bin",
+        "github-oauth" : {
+        }
+    },
+    "bin": [
+        "scripts/phpcs-composer"
+    ]
 }

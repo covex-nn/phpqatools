@@ -6,18 +6,21 @@
     <rule ref="PEAR">
         <exclude name="PEAR.Commenting.FileComment" />
         <exclude name="PEAR.Commenting.ClassComment" />
-        <exclude name="PEAR.Commenting.FunctionComment" />
         <exclude name="PEAR.WhiteSpace.ScopeIndent" />
         <exclude name="PEAR.NamingConventions.ValidFunctionName" />
         <exclude name="PEAR.NamingConventions.ValidVariableName" />
         <exclude name="PEAR.Files.IncludingFile" />
     </rule>
 
-    <rule ref="Apnet.Commenting.FunctionComment" />
-
     <rule ref="Zend.NamingConventions.ValidVariableName" />
 
     <rule ref="PEAR.WhiteSpace.ScopeClosingBrace">
+        <properties>
+            <property name="indent" value="2"/>
+        </properties>
+    </rule>
+
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent">
         <properties>
             <property name="indent" value="2"/>
         </properties>
