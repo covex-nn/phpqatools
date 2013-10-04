@@ -79,7 +79,7 @@
 
     <!-- Generate checkstyle.xml using PHP_CodeSniffer -->
     <target name="CI-phpcs" depends="CI-clean" unless="CI.no-phpcs">
-        <ci-tool name="phpcs-composer">
+        <ci-tool name="phpcs">
             <args>
                 <arg value="--encoding=utf-8" />
                 <arg value="--report=checkstyle" />
