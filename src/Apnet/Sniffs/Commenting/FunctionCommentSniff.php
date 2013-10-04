@@ -15,6 +15,15 @@ class Apnet_Sniffs_Commenting_FunctionCommentSniff extends PEAR_Sniffs_Commentin
     parent::processReturn($commentStart, $commentEnd);
   }
 
+  protected function processParams($commentStart)
+  {
+    if ($this->isInheritDoc()) {
+      return;
+    }
+
+    parent::processParams($commentStart);
+  }
+
   /**
    * Is the comment an inheritdoc?
    *

@@ -3,13 +3,13 @@
     <description>The Apnet coding standard.</description>
 
     <rule ref="PEAR">
-        <exclude name="PEAR.Commenting.FileComment" />
         <exclude name="PEAR.Commenting.ClassComment" />
+        <exclude name="PEAR.Commenting.FileComment" />
+        <exclude name="PEAR.Commenting.FunctionComment" />
         <exclude name="PEAR.WhiteSpace.ScopeIndent" />
         <exclude name="PEAR.NamingConventions.ValidFunctionName" />
         <exclude name="PEAR.NamingConventions.ValidVariableName" />
         <exclude name="PEAR.Files.IncludingFile" />
-        <exclude name="PEAR.Commenting.FunctionComment" />
     </rule>
 
     <rule ref="Zend.NamingConventions.ValidVariableName" />
