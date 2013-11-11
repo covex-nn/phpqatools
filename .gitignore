@@ -1,6 +1,5 @@
 bin
 build
-composer.lock
 nbproject
 vendor
 .idea
