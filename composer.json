@@ -7,12 +7,15 @@
         "pdepend/pdepend" : "1.1.1",
         "phpmd/phpmd" : "1.5.0",
         "sebastian/phpcpd" : "2.0.0",
-        "squizlabs/php_codesniffer" : "1.4.7",
+        "squizlabs/php_codesniffer" : "1.4.8",
         "covex-nn/phpcb": "1.0.4.1",
         "phpunit/phpunit" : "3.7.28",
         "mockery/mockery": "0.8.0",
         "phploc/phploc" : "2.0.3",
         "phpdocumentor/phpdocumentor": "2.1.0"
+    },
+    "suggest" : {
+        "apnet/coding-standard" : "Apnet PHP coding standard"
     },
     "extra" : {
         "branch-alias": {
@@ -20,7 +23,7 @@
         }
     },
     "autoload" : {
-        "psr-0" : { "JooS\\Jenkins\\": "src/", "Apnet_": "src/" }
+        "psr-0" : { "JooS\\Jenkins\\": "src/" }
     },
     "config": {
         "bin-dir" : "bin",
