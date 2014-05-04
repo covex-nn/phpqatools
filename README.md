@@ -3,8 +3,8 @@ Jenkins jobs for PHP Projects
 
 <a href="https://travis-ci.org/covex-nn/phpqatools/" target="_blank"><img src="https://travis-ci.org/covex-nn/phpqatools.png?branch=master" /></a>
 
-Getting started
-===============
+Installation
+------------
 
 * Use this template for composer.json to install all tools, described on [jenkins-php.org](http://jenkins-php.org/) via [Composer](http://getcomposer.org/)
 
@@ -19,7 +19,9 @@ Getting started
 }
 ```
 
-* Run <code>composer update</code>
+Usage
+-----
+
 * Create your *[phpcs.xml](https://github.com/covex-nn/phpqatools/blob/master/phpcs.xml)*, *[phpdoc.xml](https://github.com/covex-nn/phpqatools/blob/master/phpdoc.xml)*, *[phpmd.xml](https://github.com/covex-nn/phpqatools/blob/master/phpmd.xml)* and *[phpunit.xml](https://github.com/covex-nn/phpqatools/blob/master/phpunit.xml)*.
 * Use this template for *build.xml*
 
@@ -45,8 +47,3 @@ Getting started
 * Write [code](https://github.com/covex-nn/phpqatools/blob/master/src/JooS/Jenkins/SampleClass.php), create [unit-tests](https://github.com/covex-nn/phpqatools/blob/master/tests/src/JooS/Jenkins/SampleClassTest.php)
 * Run <code>ant init</code>
 * Run <code>ant -f build-dev.xml CI-build</code>
-* Profit
-
----
-
-This package is not stable yet, see [wiki](https://github.com/covex-nn/phpqatools/wiki)
