@@ -4,14 +4,14 @@
     "description" : "Composer package for PHP QA Tools",
     "license" : "MIT",
     "require" : {
-        "pdepend/pdepend" : "1.1.3",
-        "phpmd/phpmd" : "1.5.0",
-        "sebastian/phpcpd" : "2.0.1",
-        "squizlabs/php_codesniffer" : "1.5.3",
-        "covex-nn/phpcb": "1.0.4.1",
-        "phpunit/phpunit" : "4.1.0",
-        "phploc/phploc" : "2.0.5",
-        "phpdocumentor/phpdocumentor": "2.4.0"
+        "pdepend/pdepend" : "~1.1",
+        "phpmd/phpmd" : "~1.5",
+        "sebastian/phpcpd" : "~2.0",
+        "squizlabs/php_codesniffer" : "~1.5",
+        "covex-nn/phpcb": "~1.0",
+        "phpunit/phpunit" : ">=3.7.0",
+        "phploc/phploc" : "~2.0",
+        "phpdocumentor/phpdocumentor": "~2.4"
     },
     "suggest" : {
         "apnet/coding-standard" : "Apnet PHP coding standard"
