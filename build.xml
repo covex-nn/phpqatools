@@ -105,7 +105,7 @@
 
     <!-- Generate API documentation using phpDox -->
     <target name="CI-phpdoc" depends="CI-clean" unless="CI.no-phpdoc">
-        <ci-tool name="phpdoc.php">
+        <ci-tool name="phpdoc">
             <args>
                 <arg value="run" />
                 <arg value="--target=${CI.target}/api" />
