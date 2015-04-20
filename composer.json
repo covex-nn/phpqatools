@@ -4,17 +4,17 @@
     "description" : "Composer package for PHP QA Tools",
     "license" : "MIT",
     "require" : {
-        "pdepend/pdepend" : "~1.1",
-        "phpmd/phpmd" : "~1.5",
+        "pdepend/pdepend" : "~2.0",
+        "phpmd/phpmd" : "~2.2",
         "sebastian/phpcpd" : "~2.0",
-        "squizlabs/php_codesniffer" : "~1.5",
+        "squizlabs/php_codesniffer" : "~2.0",
         "covex-nn/phpcb": "~1.0",
-        "phpunit/phpunit" : ">=3.7.0",
+        "phpunit/phpunit" : "~4.0",
         "phploc/phploc" : "~2.0",
-        "phpdocumentor/phpdocumentor": "~2.4"
+        "phpdocumentor/phpdocumentor": "~2.8"
     },
     "suggest" : {
-        "apnet/coding-standard" : "Apnet PHP coding standard"
+        "apnet/coding-standard" : "Apnet PSR-2 PHP coding standard"
     },
     "extra" : {
         "branch-alias": {
@@ -22,11 +22,9 @@
         }
     },
     "autoload" : {
-        "psr-0" : { "JooS\\Jenkins\\": "src/" }
+        "psr-4" : { "JooS\\Jenkins\\": "src/JooS/Jenkins/" }
     },
     "config": {
-        "bin-dir" : "bin",
-        "github-oauth" : {
-        }
+        "bin-dir" : "bin"
     }
 }
