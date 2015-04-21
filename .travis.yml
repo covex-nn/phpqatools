@@ -16,4 +16,4 @@ before_script:
    - php composer.phar install --no-interaction
 
 script:
-   - ant -DCI.phpcs.standard=PEAR CI-build
+   - ant CI-build
