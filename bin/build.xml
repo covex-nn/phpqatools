@@ -39,7 +39,7 @@
         <wget src="https://phar.phpunit.de/phpcpd.phar" dest="${phpcpd}" />
         <wget src="https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar" dest="${phpcs}" />
         <wget src="https://github.com/mayflower/PHP_CodeBrowser/releases/download/1.1.0/phpcb-1.1.0.phar" dest="${phpcb}" />
-        <wget src="https://phar.phpunit.de/phpunit.phar" dest="${phpunit}" />
+        <wget src="https://phar.phpunit.de/phpunit-4.8.26.phar" dest="${phpunit}" />
         <wget src="https://phar.phpunit.de/phploc.phar" dest="${phploc}" />
         <wget src="https://phpdoc.org/phpDocumentor.phar" dest="${phpdoc}" />
     </target>
