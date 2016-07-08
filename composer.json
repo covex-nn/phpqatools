@@ -3,6 +3,9 @@
     "type" : "library",
     "description" : "Composer package for PHP QA Tools",
     "license" : "MIT",
+    "require" : {
+        "php" : ">=5.5.9"
+    },
     "suggest" : {
         "apnet/coding-standard" : "Apnet PSR-2 PHP coding standard"
     },
