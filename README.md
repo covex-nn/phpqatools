@@ -1,7 +1,19 @@
-Jenkins jobs for PHP Projects
-=============================
+PHP QA Tools
+============
 
 <a href="https://travis-ci.org/covex-nn/phpqatools/" target="_blank"><img src="https://travis-ci.org/covex-nn/phpqatools.png?branch=master" /></a>
+
+List
+----
+
+* PHPUnit v4.8.26
+* PHP_CodeSniffer v2.6.1
+* phpDocumentor v2.8.5
+* PHPMD v2.4.3
+* phpcpd v2.0.4
+* phploc v3.0.1
+* PDepend v2.2.4
+* PHP CodeBrowser
 
 Installation
 ------------
@@ -11,7 +23,7 @@ Installation
 ```json
 {
   "require-dev" : {
-    "covex-nn/phpqatools" : "~1.0"
+    "covex-nn/phpqatools" : "~2.0"
   }, 
   "config" : {
     "bin-dir" : "bin"
