@@ -44,7 +44,7 @@
 
     <!-- Generate jdepend.xml and software metrics charts using PHP_Depend -->
     <target name="CI-pdepend" depends="CI-clean" unless="CI.no-pdepend">
-        <ci-tool name="pdepend">
+        <ci-tool name="pdepend.phar">
             <args>
                 <arg value="--jdepend-xml=${CI.target}/logs/jdepend.xml" />
                 <arg value="--jdepend-chart=${CI.target}/pdepend/dependencies.svg" />
@@ -56,7 +56,7 @@
 
     <!-- Generate pmd.xml using PHPMD -->
     <target name="CI-phpmd" depends="CI-clean" unless="CI.no-phpmd">
-        <ci-tool name="phpmd">
+        <ci-tool name="phpmd.phar">
             <args>
                 <arg value="${CI.source}" />
                 <arg value="xml" />
@@ -69,7 +69,7 @@
 
     <!-- Generate pmd-cpd.xml using PHPCPD -->
     <target name="CI-phpcpd" depends="CI-clean" unless="CI.no-phpcpd">
-        <ci-tool name="phpcpd">
+        <ci-tool name="phpcpd.phar">
             <args>
                 <arg value="--log-pmd" />
                 <arg value="${CI.target}/logs/pmd-cpd.xml" />
@@ -80,7 +80,7 @@
 
     <!-- Generate checkstyle.xml using PHP_CodeSniffer -->
     <target name="CI-phpcs" depends="CI-clean" unless="CI.no-phpcs">
-        <ci-tool name="phpcs">
+        <ci-tool name="phpcs.phar">
             <args>
                 <arg value="--encoding=utf-8" />
                 <arg value="--report=checkstyle" />
@@ -94,7 +94,7 @@
 
     <!-- Generate phploc.csv -->
     <target name="CI-phploc" depends="CI-clean" unless="CI.no-phploc">
-        <ci-tool name="phploc">
+        <ci-tool name="phploc.phar">
             <args>
                 <arg value="--log-csv" />
                 <arg value="${CI.target}/logs/phploc.csv" />
@@ -105,7 +105,7 @@
 
     <!-- Generate API documentation using phpDox -->
     <target name="CI-phpdoc" depends="CI-clean" unless="CI.no-phpdoc">
-        <ci-tool name="phpdoc">
+        <ci-tool name="phpdoc.phar">
             <args>
                 <arg value="run" />
                 <arg value="--target=${CI.target}/api" />
@@ -116,12 +116,12 @@
 
     <!-- Run unit tests using PHPUnit and generates junit.xml and clover.xml -->
     <target name="CI-phpunit" depends="CI-clean" unless="CI.no-phpunit">
-        <ci-tool name="phpunit" failonerror="true" />
+        <ci-tool name="phpunit.phar" failonerror="true" />
     </target>
 
     <!-- Aggregate tool output with PHP_CodeBrowser -->
     <target name="CI-phpcb" depends="CI-clean,CI-phpcs,CI-phpcpd,CI-phpmd,CI-phpunit" unless="CI.no-phpcb">
-        <ci-tool name="phpcb">
+        <ci-tool name="phpcb.phar">
             <args>
                 <arg value="--log" />
                 <arg value="${CI.target}/logs" />

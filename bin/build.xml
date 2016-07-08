@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="covex-nn\phpqatools-download" default="init" basedir=".">
+
+    <property name="pdepend" value="pdepend.phar" />
+    <property name="phpmd" value="phpmd.phar" />
+    <property name="phpcpd" value="phpcpd.phar" />
+    <property name="phpcs" value="phpcs.phar" />
+    <property name="phpcb" value="phpcb.phar" />
+    <property name="phpunit" value="phpunit.phar" />
+    <property name="phploc" value="phploc.phar" />
+    <property name="phpdoc" value="phpdoc.phar" />
+
+    <macrodef name="wget">
+        <attribute name="src" />
+        <attribute name="dest" />
+
+        <sequential>
+            <exec executable="php" dir="." failonerror="true">
+                <arg line="-r &quot;copy('@{src}', '@{dest}');&quot;" />
+            </exec>
+            <echo>@{dest} - OK</echo>
+        </sequential>
+    </macrodef>
+
+    <macrodef name="version">
+        <attribute name="name" />
+
+        <sequential>
+            <exec executable="php" dir="." failonerror="true">
+                <arg line="-r &quot;copy('@{src}', '@{dest}');&quot;" />
+            </exec>
+            <echo>@{dest} - OK</echo>
+        </sequential>
+    </macrodef>
+
+    <target name="init">
+        <wget src="http://static.pdepend.org/php/latest/pdepend.phar" dest="${pdepend}" />
+        <wget src="https://static.phpmd.org/php/latest/phpmd.phar" dest="${phpmd}" />
+        <wget src="https://phar.phpunit.de/phpcpd.phar" dest="${phpcpd}" />
+        <wget src="https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar" dest="${phpcs}" />
+        <wget src="https://github.com/mayflower/PHP_CodeBrowser/releases/download/1.1.0/phpcb-1.1.0.phar" dest="${phpcb}" />
+        <wget src="https://phar.phpunit.de/phpunit.phar" dest="${phpunit}" />
+        <wget src="https://phar.phpunit.de/phploc.phar" dest="${phploc}" />
+        <wget src="https://phpdoc.org/phpDocumentor.phar" dest="${phpdoc}" />
+    </target>
+
+</project>
