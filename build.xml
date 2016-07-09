@@ -28,7 +28,7 @@
             <exec executable="php" dir="@{dir}" failonerror="@{failonerror}">
                 <arg value="-d" />
                 <arg value="xdebug.max_nesting_level=500" />
-                <arg value="${CI.bin}\\@{name}" />
+                <arg value="${CI.bin}/@{name}" />
                 <args/>
             </exec>
         </sequential>
