@@ -16,15 +16,5 @@
     },
     "autoload" : {
         "psr-4" : { "JooS\\Jenkins\\": "src/JooS/Jenkins/" }
-    },
-    "bin" : [
-        "bin/pdepend.phar",
-        "bin/phpcb.phar",
-        "bin/phpcpd.phar",
-        "bin/phpcs.phar",
-        "bin/phpdoc.phar",
-        "bin/phploc.phar",
-        "bin/phpmd.phar",
-        "bin/phpunit.phar"
-    ]
+    }
 }

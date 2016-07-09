@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="covex-nn\phpqatools" default="CI-build" basedir=".">
-
     <property name="CI.basedir" value="${basedir}" />
-    <property name="CI.bin" value="bin" />
+    <property name="CI.bin" value="vendor/covex-nn/phpqatools/bin" />
     <property name="CI.source" value="src" />
     <property name="CI.target" value="build" />
 
@@ -26,13 +25,10 @@
         <element name="args" optional="true" />
 
         <sequential>
-            <exec executable="cmd" dir="@{dir}" failonerror="@{failonerror}" osfamily="windows">
-                <arg value="/c" />
-                <arg value="${CI.bin}\\@{name}.bat" />
-                <args/>
-            </exec>
-
-            <exec executable="${CI.bin}/@{name}" dir="@{dir}" failonerror="@{failonerror}" osfamily="unix">
+            <exec executable="php" dir="@{dir}" failonerror="@{failonerror}">
+                <arg value="-d" />
+                <arg value="xdebug.max_nesting_level=500" />
+                <arg value="${CI.bin}\\@{name}" />
                 <args/>
             </exec>
         </sequential>

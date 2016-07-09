@@ -18,4 +18,4 @@ before_script:
    - php composer.phar install --no-interaction
 
 script:
-   - ant CI-build
+   - ant -DCI.bin=bin CI-build

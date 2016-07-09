@@ -3,8 +3,8 @@ PHP QA Tools
 
 <a href="https://travis-ci.org/covex-nn/phpqatools/" target="_blank"><img src="https://travis-ci.org/covex-nn/phpqatools.png?branch=master" /></a>
 
-List
-----
+Contents (Phar files)
+---------------------
 
 * PHPUnit v4.8.26
 * PHP_CodeSniffer v2.6.1
@@ -24,9 +24,6 @@ Installation
 {
   "require-dev" : {
     "covex-nn/phpqatools" : "~2.0"
-  }, 
-  "config" : {
-    "bin-dir" : "bin"
   }
 }
 ```
