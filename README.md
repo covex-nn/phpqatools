@@ -56,3 +56,25 @@ Usage
 * Write [code](https://github.com/covex-nn/phpqatools/blob/master/src/JooS/Jenkins/SampleClass.php), create [unit-tests](https://github.com/covex-nn/phpqatools/blob/master/tests/src/JooS/Jenkins/SampleClassTest.php)
 * Run <code>ant init</code>
 * Run <code>ant -f build-dev.xml CI-build</code>
+
+To skip one ore more QA tools set appropriate ant property to `1`:
+
+* `CI.no-pdepend`
+* `CI.no-phpmd`
+* `CI.no-phpcpd`
+* `CI.no-phpcs`
+* `CI.no-phploc`
+* `CI.no-phpunit`
+* `CI.no-phpcb`
+* `CI.no-phpdoc`
+
+To fail or to ignore ant job if CI tool return non-zero result set appropriate ant property to `true` or to `false`:
+
+* `CI.failonerror-phpunit` (default value: `true`)
+* `CI.failonerror-pdepend` (default value: `false`)
+* `CI.failonerror-phpmd` (default value: `false`)
+* `CI.failonerror-phpcpd` (default value: `false`)
+* `CI.failonerror-phpcs` (default value: `false`)
+* `CI.failonerror-phploc` (default value: `false`)
+* `CI.failonerror-phpcb` (default value: `false`)
+* `CI.failonerror-phpdoc` (default value: `false`)
